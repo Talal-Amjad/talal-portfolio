@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Talal Amjad | Full-Stack Developer & API Architect</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Vanilla Tilt JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="glass-nav fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold gradient-text">MTA</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="Talal_Resume.pdf" download class="magnetic-btn bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-lg pulse-glow font-semibold inline-flex items-center">
+                    <i class="fas fa-download mr-2"></i>Download Resume
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-slate-900 md:hidden shadow-2xl">
+            <div class="p-6">
+                <button id="close-menu" class="text-2xl mb-8 float-right">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="clear-both flex flex-col space-y-6 mt-8">
+                    <a href="#experience" class="hover:text-blue-400 transition-colors mobile-link">Experience</a>
+                    <a href="#projects" class="hover:text-blue-400 transition-colors mobile-link">Projects</a>
+                    <a href="#skills" class="hover:text-blue-400 transition-colors mobile-link">Skills</a>
+                    <a href="#contact" class="hover:text-blue-400 transition-colors mobile-link">Contact</a>
+                    <a href="Talal_Resume.pdf" download class="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-lg font-semibold inline-flex items-center">
+                        <i class="fas fa-download mr-2"></i>Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Background Blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+            <!-- Profile Image with Float -->
+            <div class="mb-8 float-animation" data-aos="fade-down">
+                <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+                    <div class="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
+                        <span class="text-5xl font-bold gradient-text">MTA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Name -->
+            <h1 class="text-5xl md:text-7xl font-bold mb-4" data-aos="fade-up" data-aos-delay="100">
+                Muhammad Talal <span class="gradient-text">Amjad</span>
+            </h1>
+
+            <!-- Title -->
+            <h2 class="text-2xl md:text-3xl text-gray-400 mb-6" data-aos="fade-up" data-aos-delay="200">
+                Full-Stack Developer & <span class="text-blue-400">API Architect</span>
+            </h2>
+
+            <!-- Subtitle -->
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="300">
+                Specializing in <span class="text-blue-400 font-semibold">React</span> & 
+                <span class="text-red-400 font-semibold">Ruby on Rails</span> to build scalable, 
+                high-performance web applications
+            </p>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 mb-12" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://www.linkedin.com/in/talal-amjad/" target="_blank" class="magnetic-btn bg-slate-800 hover:bg-slate-700 p-4 rounded-lg transition-all border border-slate-700 hover:border-blue-500">
+                    <i class="fab fa-linkedin text-2xl text-blue-400"></i>
+                </a>
+                <a href="https://github.com/talal-amjad" target="_blank" class="magnetic-btn bg-slate-800 hover:bg-slate-700 p-4 rounded-lg transition-all border border-slate-700 hover:border-purple-500">
+                    <i class="fab fa-github text-2xl text-purple-400"></i>
+                </a>
+                <a href="mailto:mtakamboh@gmail.com" class="magnetic-btn bg-slate-800 hover:bg-slate-700 p-4 rounded-lg transition-all border border-slate-700 hover:border-pink-500">
+                    <i class="fas fa-envelope text-2xl text-pink-400"></i>
+                </a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6" data-aos="fade-up" data-aos-delay="500">
+                <a href="#projects" class="magnetic-btn bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all">
+                    View My Work
+                </a>
+                <a href="#contact" class="magnetic-btn border-2 border-blue-500 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-500/10 transition-all">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-3xl text-blue-400"></i>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+            Professional <span class="gradient-text">Experience</span>
+        </h2>
+        <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">
+            My journey building exceptional web applications
+        </p>
+
+        <div class="relative pl-8 md:pl-12">
+            <!-- Timeline Line -->
+            <div class="timeline-line"></div>
+
+            <!-- CodingCops - Current -->
+            <div class="mb-16 relative" data-aos="fade-up" data-aos-delay="200">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[-9px] top-2 w-5 h-5 rounded-full bg-blue-500 border-4 border-slate-900 pulse-dot"></div>
+                
+                <div class="gradient-border">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-blue-400 mb-2">Software Engineer</h3>
+                                <p class="text-xl text-gray-300 mb-2">CodingCops</p>
+                                <p class="text-sm text-gray-500">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>Faisalabad, Pakistan
+                                </p>
+                            </div>
+                            <span class="text-gray-400 font-semibold mt-2 md:mt-0">
+                                <i class="fas fa-calendar-alt mr-2"></i>Nov 2024 - Present
+                            </span>
+                        </div>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Architected RESTful APIs using <strong class="text-red-400">Ruby on Rails</strong> serving 50K+ daily requests</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Built responsive SPAs with <strong class="text-cyan-400">React</strong> and Redux for state management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Optimized database queries reducing page load times by 40%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Implemented CI/CD pipelines with GitHub Actions and Docker</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-red-500/10 text-red-400 px-3 py-1 rounded-full text-sm border border-red-500/30">Ruby on Rails</span>
+                            <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-sm border border-cyan-500/30">React</span>
+                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm border border-blue-500/30">PostgreSQL</span>
+                            <span class="bg-gray-500/10 text-gray-400 px-3 py-1 rounded-full text-sm border border-gray-500/30">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Askus Solution -->
+            <div class="mb-16 relative" data-aos="fade-up" data-aos-delay="300">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[-9px] top-2 w-5 h-5 rounded-full bg-purple-500 border-4 border-slate-900"></div>
+                
+                <div class="gradient-border">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-purple-400 mb-2">Associate Software Engineer</h3>
+                                <p class="text-xl text-gray-300 mb-2">Askus Solution</p>
+                                <p class="text-sm text-gray-500">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>Faisalabad, Pakistan
+                                </p>
+                            </div>
+                            <span class="text-gray-400 font-semibold mt-2 md:mt-0">
+                                <i class="fas fa-calendar-alt mr-2"></i>Jun 2024 - Oct 2024
+                            </span>
+                        </div>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Developed interactive dashboards using <strong class="text-cyan-400">React</strong> and Material-UI</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Integrated Django REST APIs for data visualization and analytics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Collaborated with UX team to improve user engagement by 35%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Implemented responsive designs ensuring cross-browser compatibility</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-sm border border-cyan-500/30">React</span>
+                            <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-sm border border-green-500/30">Django</span>
+                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm border border-blue-500/30">Material-UI</span>
+                            <span class="bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full text-sm border border-yellow-500/30">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coduix - Internship -->
+            <div class="relative" data-aos="fade-up" data-aos-delay="400">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[-9px] top-2 w-5 h-5 rounded-full bg-green-500 border-4 border-slate-900"></div>
+                
+                <div class="gradient-border">
+                    <div class="gradient-border-content p-6">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-green-400 mb-2">Software Engineer Intern</h3>
+                                <p class="text-xl text-gray-300 mb-2">Coduix</p>
+                                <p class="text-sm text-gray-500">
+                                    <i class="fas fa-laptop mr-2"></i>Remote
+                                </p>
+                            </div>
+                            <span class="text-gray-400 font-semibold mt-2 md:mt-0">
+                                <i class="fas fa-calendar-alt mr-2"></i>Jul 2023 - Sep 2023
+                            </span>
+                        </div>
+                        <ul class="space-y-3 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Contributed to full-stack development using modern JavaScript frameworks</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Assisted in building RESTful APIs and database schema design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Participated in code reviews and agile development processes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Gained hands-on experience with Git workflows and team collaboration</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full text-sm border border-yellow-500/30">JavaScript</span>
+                            <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-sm border border-green-500/30">Node.js</span>
+                            <span class="bg-orange-500/10 text-orange-400 px-3 py-1 rounded-full text-sm border border-orange-500/30">Git</span>
+                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm border border-blue-500/30">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+            Featured <span class="gradient-text">Projects</span>
+        </h2>
+        <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">
+            Showcasing my best work and innovations
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- TurboLance -->
+            <div class="project-card relative bg-slate-800/50 rounded-xl p-6 border border-slate-700 tilt-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="mb-4">
+                    <div class="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-rocket text-6xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-blue-400">TurboLance</h3>
+                    <p class="text-gray-400 mb-4">
+                        A freelance marketplace platform connecting businesses with top-tier developers. Features real-time messaging, escrow payments, and AI-powered job matching.
+                    </p>
+                </div>
+                <div class="mb-4 flex flex-wrap gap-2">
+                    <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-xs border border-cyan-500/30">React</span>
+                    <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-xs border border-green-500/30">Node.js</span>
+                    <span class="bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full text-xs border border-yellow-500/30">Socket.io</span>
+                    <span class="bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full text-xs border border-purple-500/30">MongoDB</span>
+                </div>
+                <a href="https://github.com/yourusername/turbolance" target="_blank" class="magnetic-btn w-full bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 py-3 rounded-lg text-center transition-all border border-slate-600 hover:border-purple-500 flex items-center justify-center group">
+                    <i class="fab fa-github text-xl mr-2 group-hover:text-purple-400 transition-colors"></i>
+                    <span class="font-semibold">View on GitHub</span>
+                </a>
+            </div>
+
+            <!-- Pak Covid Insight -->
+            <div class="project-card relative bg-slate-800/50 rounded-xl p-6 border border-slate-700 tilt-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="mb-4">
+                    <div class="w-full h-48 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-6xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-green-400">Pak Covid Insight</h3>
+                    <p class="text-gray-400 mb-4">
+                        Real-time COVID-19 analytics dashboard for Pakistan with interactive maps, trend analysis, and predictive modeling using machine learning.
+                    </p>
+                </div>
+                <div class="mb-4 flex flex-wrap gap-2">
+                    <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs border border-blue-500/30">Python</span>
+                    <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-xs border border-green-500/30">Django</span>
+                    <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-xs border border-cyan-500/30">React</span>
+                    <span class="bg-red-500/10 text-red-400 px-3 py-1 rounded-full text-xs border border-red-500/30">D3.js</span>
+                </div>
+                <a href="https://github.com/yourusername/pak-covid-insight" target="_blank" class="magnetic-btn w-full bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 py-3 rounded-lg text-center transition-all border border-slate-600 hover:border-green-500 flex items-center justify-center group">
+                    <i class="fab fa-github text-xl mr-2 group-hover:text-green-400 transition-colors"></i>
+                    <span class="font-semibold">View on GitHub</span>
+                </a>
+            </div>
+
+            <!-- ShopLink -->
+            <div class="project-card relative bg-slate-800/50 rounded-xl p-6 border border-slate-700 tilt-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="mb-4">
+                    <div class="w-full h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shopping-cart text-6xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-purple-400">ShopLink</h3>
+                    <p class="text-gray-400 mb-4">
+                        E-commerce platform with AI-powered recommendations, Power BI analytics, and NLP-based customer support chatbot for enhanced user experience.
+                    </p>
+                </div>
+                <div class="mb-4 flex flex-wrap gap-2">
+                    <span class="bg-red-500/10 text-red-400 px-3 py-1 rounded-full text-xs border border-red-500/30">Ruby on Rails</span>
+                    <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-xs border border-cyan-500/30">React</span>
+                    <span class="bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full text-xs border border-yellow-500/30">Power BI</span>
+                    <span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-xs border border-green-500/30">NLP</span>
+                </div>
+                <a href="https://github.com/yourusername/shoplink" target="_blank" class="magnetic-btn w-full bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-600 hover:to-slate-700 py-3 rounded-lg text-center transition-all border border-slate-600 hover:border-pink-500 flex items-center justify-center group">
+                    <i class="fab fa-github text-xl mr-2 group-hover:text-pink-400 transition-colors"></i>
+                    <span class="font-semibold">View on GitHub</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- Skills Matrix with Infinite Scroll -->
+    <section id="skills" class="py-20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+                Skills & <span class="gradient-text">Expertise</span>
+            </h2>
+            <p class="text-center text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="100">
+                Technologies I work with daily
+            </p>
+        </div>
+
+        <!-- Web Development Skills Marquee -->
+        <div class="mb-8">
+            <h3 class="text-center text-xl font-semibold text-blue-400 mb-4">
+                <i class="fas fa-code mr-2"></i>Web Development
+            </h3>
+            <div class="flex space-x-6 skills-marquee">
+                <!-- First Set -->
+                <div class="flex space-x-6 flex-shrink-0">
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-react text-4xl text-cyan-400"></i>
+                        <div>
+                            <p class="font-semibold">React.js</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-gem text-4xl text-red-500"></i>
+                        <div>
+                            <p class="font-semibold">Ruby on Rails</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-python text-4xl text-blue-400"></i>
+                        <div>
+                            <p class="font-semibold">Django</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-node-js text-4xl text-green-500"></i>
+                        <div>
+                            <p class="font-semibold">Node.js</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+                        <div>
+                            <p class="font-semibold">Tailwind CSS</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate Set for Seamless Loop -->
+                <div class="flex space-x-6 flex-shrink-0">
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-react text-4xl text-cyan-400"></i>
+                        <div>
+                            <p class="font-semibold">React.js</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-gem text-4xl text-red-500"></i>
+                        <div>
+                            <p class="font-semibold">Ruby on Rails</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-python text-4xl text-blue-400"></i>
+                        <div>
+                            <p class="font-semibold">Django</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-node-js text-4xl text-green-500"></i>
+                        <div>
+                            <p class="font-semibold">Node.js</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500"></i>
+                        <div>
+                            <p class="font-semibold">Tailwind CSS</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programming Languages Marquee (Reverse Direction) -->
+        <div class="mb-8">
+            <h3 class="text-center text-xl font-semibold text-purple-400 mb-4">
+                <i class="fas fa-laptop-code mr-2"></i>Programming Languages
+            </h3>
+            <div class="flex space-x-6 skills-marquee" style="animation-direction: reverse;">
+                <!-- First Set -->
+                <div class="flex space-x-6 flex-shrink-0">
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-js text-4xl text-yellow-400"></i>
+                        <div>
+                            <p class="font-semibold">JavaScript</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-python text-4xl text-blue-400"></i>
+                        <div>
+                            <p class="font-semibold">Python</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-code text-4xl text-blue-600"></i>
+                        <div>
+                            <p class="font-semibold">C++</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-gem text-4xl text-red-500"></i>
+                        <div>
+                            <p class="font-semibold">Ruby</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-database text-4xl text-blue-300"></i>
+                        <div>
+                            <p class="font-semibold">SQL</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate Set -->
+                <div class="flex space-x-6 flex-shrink-0">
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-js text-4xl text-yellow-400"></i>
+                        <div>
+                            <p class="font-semibold">JavaScript</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-python text-4xl text-blue-400"></i>
+                        <div>
+                            <p class="font-semibold">Python</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-code text-4xl text-blue-600"></i>
+                        <div>
+                            <p class="font-semibold">C++</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-gem text-4xl text-red-500"></i>
+                        <div>
+                            <p class="font-semibold">Ruby</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-database text-4xl text-blue-300"></i>
+                        <div>
+                            <p class="font-semibold">SQL</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools & Platforms Marquee -->
+        <div>
+            <h3 class="text-center text-xl font-semibold text-green-400 mb-4">
+                <i class="fas fa-toolbox mr-2"></i>Tools & Platforms
+            </h3>
+            <div class="flex space-x-6 skills-marquee">
+                <!-- First Set -->
+                <div class="flex space-x-6 flex-shrink-0">
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-git-alt text-4xl text-orange-500"></i>
+                        <div>
+                            <p class="font-semibold">Git & GitHub</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-code text-4xl text-blue-500"></i>
+                        <div>
+                            <p class="font-semibold">VS Code</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-ubuntu text-4xl text-orange-600"></i>
+                        <div>
+                            <p class="font-semibold">Ubuntu/Linux</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-docker text-4xl text-blue-400"></i>
+                        <div>
+                            <p class="font-semibold">Docker</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-database text-4xl text-blue-300"></i>
+                        <div>
+                            <p class="font-semibold">PostgreSQL</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate Set -->
+                <div class="flex space-x-6 flex-shrink-0">
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-git-alt text-4xl text-orange-500"></i>
+                        <div>
+                            <p class="font-semibold">Git & GitHub</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-code text-4xl text-blue-500"></i>
+                        <div>
+                            <p class="font-semibold">VS Code</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-ubuntu text-4xl text-orange-600"></i>
+                        <div>
+                            <p class="font-semibold">Ubuntu/Linux</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fab fa-docker text-4xl text-blue-400"></i>
+                        <div>
+                            <p class="font-semibold">Docker</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="far fa-star text-gray-600 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card bg-slate-800/50 px-6 py-4 rounded-xl border border-slate-700 flex items-center space-x-3 min-w-fit">
+                        <i class="fas fa-database text-4xl text-blue-300"></i>
+                        <div>
+                            <p class="font-semibold">PostgreSQL</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with EmailJS -->
+    <section id="contact" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-4" data-aos="fade-up">
+            Let's <span class="gradient-text">Connect</span>
+        </h2>
+        <p class="text-center text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="100">
+            Have a project in mind? Let's build something amazing together
+        </p>
+
+        <div class="max-w-2xl mx-auto">
+            <div class="gradient-border" data-aos="fade-up" data-aos-delay="200">
+                <div class="gradient-border-content p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-400 mb-2">Name *</label>
+                            <input 
+                                type="text" 
+                                name="user_name" 
+                                id="from_name"
+                                required
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" 
+                                placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 mb-2">Email *</label>
+                            <input 
+                                type="email" 
+                                name="user_email" 
+                                id="from_email"
+                                required
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" 
+                                placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 mb-2">Subject</label>
+                            <input 
+                                type="text" 
+                                name="subject" 
+                                id="subject"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" 
+                                placeholder="Project Inquiry">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 mb-2">Message *</label>
+                            <textarea 
+                                rows="5" 
+                                name="message" 
+                                id="message"
+                                required
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" 
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button 
+                            type="submit" 
+                            id="submit-btn"
+                            class="magnetic-btn w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all flex items-center justify-center">
+                            <span id="btn-text">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </span>
+                            <span id="btn-loading" class="hidden">
+                                <div class="spinner mr-2"></div>Sending...
+                            </span>
+                        </button>
+                    </form>
+
+                    <!-- Success/Error Message Container -->
+                    <div id="form-message" class="hidden"></div>
+
+                    <div class="mt-8 pt-8 border-t border-slate-700">
+                        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-2xl text-blue-400"></i>
+                                <a href="mailto:mtakamboh@gmail.com" class="text-gray-400">mtakamboh@gmail.com</a>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/talal-amjad/" target="_blank" class="magnetic-btn bg-slate-700 hover:bg-slate-600 p-3 rounded-lg transition-all">
+                                    <i class="fab fa-linkedin text-xl text-blue-400"></i>
+                                </a>
+                                <a href="https://github.com/talal-amjad" target="_blank" class="magnetic-btn bg-slate-700 hover:bg-slate-600 p-3 rounded-lg transition-all">
+                                    <i class="fab fa-github text-xl text-purple-400"></i>
+                                </a>
+                                <a href="https://instagram.com/talal_kamboh" target="_blank" class="magnetic-btn bg-slate-700 hover:bg-slate-600 p-3 rounded-lg transition-all">
+                                    <i class="fab fa-instagram text-xl text-pink-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2026 Muhammad Talal Amjad.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
