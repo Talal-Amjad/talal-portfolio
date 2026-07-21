@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://talal-amjad.github.io/talal-portfolio/sitemap.xml

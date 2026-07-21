@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Talal portfolio icon">
+  <rect width="64" height="64" rx="16" fill="#020617"/>
+  <path d="M18 18h10v28H18z" fill="#3b82f6"/>
+  <path d="M36 18h10v28H36z" fill="#8b5cf6"/>
+  <path d="M24 46h20" stroke="#f8fafc" stroke-width="4" stroke-linecap="round"/>
+</svg>
